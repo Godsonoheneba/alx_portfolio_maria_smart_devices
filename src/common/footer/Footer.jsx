@@ -31,7 +31,7 @@ const Footer = () => {
               <li>Privacy Policy</li>
             </ul>
           </div>
-          <div className='box'>
+          {/* <div className='box'>
             <h2>Customer Care</h2>
             <ul>
               <li>Help Center </li>
@@ -40,7 +40,7 @@ const Footer = () => {
               <li>Corporate & Bulk Purchasing </li>
               <li>Returns & Refunds </li>
             </ul>
-          </div>
+          </div> */}
           <div className='box'>
             <h2>Contact Us</h2>
             <ul>
