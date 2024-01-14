@@ -3,6 +3,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
+import { useHistory } from 'react-router-dom';
+
 
 const Register = () => {
   const [fullName, setFullName] = useState("");
@@ -10,10 +12,11 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add validation for password match, etc.
+  
     if (password !== confirmPassword) {
       toast.error("Passwords do not match!", {
         position: "top-center",
@@ -21,15 +24,20 @@ const Register = () => {
       });
       return;
     }
+  
     // Handle the registration logic here
     console.log(fullName, mobile, email, password);
-
-    // If registration is successful, show a success toast
+  
     toast.success("Registration successful!", {
       position: "top-center",
       autoClose: 5000,
     });
+    setTimeout(() => {
+      
+      history.push('/login'); 
+    }, 2000); 
   };
+  
 
   return (
     <>
