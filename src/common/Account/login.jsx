@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
-import {  Link } from "react-router-dom";
+import {  Link , useHistory} from "react-router-dom";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const history = useHistory();
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,6 +27,10 @@ const Login = () => {
             draggable: true,
             progress: undefined,
           });
+
+          setTimeout(() => {
+            history.push('/category'); 
+          }, 2000); 
   };
 
   return (

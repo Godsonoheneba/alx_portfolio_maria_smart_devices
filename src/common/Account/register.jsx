@@ -33,7 +33,6 @@ const Register = () => {
       autoClose: 5000,
     });
     setTimeout(() => {
-      
       history.push('/login'); 
     }, 2000); 
   };

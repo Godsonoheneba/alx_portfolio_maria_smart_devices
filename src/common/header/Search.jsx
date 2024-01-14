@@ -8,7 +8,7 @@ const Search = ({ CartItem }) => {
     const search = document.querySelector(".search")
     search.classList.toggle("active", window.scrollY > 100)
   })
-
+ 
   return (
     <>
       <section className='search'>
